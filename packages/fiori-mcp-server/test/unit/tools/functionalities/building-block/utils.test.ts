@@ -1,4 +1,10 @@
-import { resolveWithinApp, resolveBasePath, versionRequirementsNote, toDisplayName, BB_TYPE_MIN_UI5_VERSION } from '../../../../../src/tools/functionalities/building-block/utils.js';
+import {
+    resolveWithinApp,
+    resolveBasePath,
+    versionRequirementsNote,
+    toDisplayName,
+    BB_TYPE_MIN_UI5_VERSION
+} from '../../../../../src/tools/functionalities/building-block/utils.js';
 import type { Appdetails } from '../../../../../src/types/index.js';
 
 describe('resolveWithinApp', () => {
@@ -62,7 +68,9 @@ describe('BB_TYPE_MIN_UI5_VERSION', () => {
 
 describe('versionRequirementsNote', () => {
     test('lists the real RTE and Page minimums from the writer constants', () => {
-        expect(versionRequirementsNote).toContain('Types requiring UI5 >= 1.117.0: RichTextEditor, RichTextEditorButtonGroups.');
+        expect(versionRequirementsNote).toContain(
+            'Types requiring UI5 >= 1.117.0: RichTextEditor, RichTextEditorButtonGroups.'
+        );
         expect(versionRequirementsNote).toContain('Types requiring UI5 >= 1.136.0: Page (basic).');
         expect(versionRequirementsNote).toContain('Types requiring UI5 >= 1.145.0: Page (full layout).');
     });
